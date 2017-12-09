@@ -12,14 +12,16 @@ def read():
     #take the ","s out
     data_ready = [[i.replace(',', '') if i.count(',') >= 1 else i for i in lst] for lst in data]
 
+    chart(data_ready)
 
-    #create charts
+def chart(data):
+    """render chart"""
     line_chart = pygal.Line()
     line_chart.title = 'Bungkan'
     line_chart.x_title = 'Years'
     line_chart.y_title = 'Baht'
-    line_chart.x_labels = map(str, range(2006, 2016))
-    line_chart.add(data_ready[56][0], [int(i) for i in data_ready[56][1:]])
+    line_chart.x_labels = map(str, range(2549, 2559))
+    line_chart.add(data[56][0], [int(i) for i in data[56][1:]])
     line_chart.render_to_file('test.svg')
 
 
