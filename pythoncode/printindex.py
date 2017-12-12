@@ -1,10 +1,10 @@
-"""test"""
+"""print index"""
 
 import pandas as pd
 import numpy
 
 def test():
-    """read csv"""
+    """read csv and print index and data list"""
     data_frame = pd.read_csv('expenditure.csv')
     data = (numpy.array(data_frame)).tolist()
 
