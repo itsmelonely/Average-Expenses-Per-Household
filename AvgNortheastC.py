@@ -24,6 +24,7 @@ def chart(data):
         x_title='Year',
         y_title='Baht')
     line_chart.x_labels = map(str, range(2549, 2559))
+    line_chart.y_labels = [i*1000 for i in range(6, 19)]
 
     #adding data
     country_group = {
