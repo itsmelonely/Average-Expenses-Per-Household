@@ -22,6 +22,7 @@ def chart(data):
         y_title='Baht',
         fill=True)
     line_chart.x_labels = map(str, range(2549, 2559))
+    line_chart.y_labels = [i*1000 for i in range(11, 23)]
     line_chart.add(data[0][0], [int(i) for i in data[0][1:]])
     line_chart.render_to_file('AvgKingdom.svg')
 
